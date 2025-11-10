@@ -26,19 +26,19 @@ const defaultProjects: Project[] = [
   {
     title: 'Portfolio 1',
     description: 'Web Development',
-    image: '/images/portfolio1.svg',
+    image: '/images/Portfolio1.svg',
     link: 'https://www.webprogramminghack.com/',
   },
   {
     title: 'Portfolio 2',
     description: 'Web Development',
-    image: '/images/portfolio2.svg',
+    image: '/images/Portfolio2.svg',
     link: 'https://www.webprogramminghack.com/',
   },
   {
     title: 'Portfolio 3',
     description: 'Web Development',
-    image: '/images/portfolio3.svg',
+    image: '/images/Portfolio3.svg',
     link: 'https://www.webprogramminghack.com/',
   },
 ];
