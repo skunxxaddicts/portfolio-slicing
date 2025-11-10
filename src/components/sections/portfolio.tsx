@@ -99,7 +99,7 @@ export function Portfolio({
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="w-full relative"
+              className="w-full relative flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -109,7 +109,7 @@ export function Portfolio({
               }}
             >
               {/* Best Portfolio Badge */}
-              <div className="absolute top-7 -left-2 z-20">
+              <div className="absolute top-7 left-0 sm:-left-2 z-20">
                 <div className="relative">
                   <Image
                     src="/images/tape.svg"
@@ -122,8 +122,8 @@ export function Portfolio({
               </div>
 
               {/* Image Card */}
-              <div className="group relative w-[361px] lg:w-[387px] h-[361px] lg:h-[387px] flex items-center justify-center overflow-hidden rounded-3xl bg-neutral-100 transition-all">
-                <div className="relative w-[329px] lg:w-[355px] h-[329px] lg:h-[355px]">
+              <div className="group relative w-full max-w-[361px] lg:max-w-[387px] aspect-square flex items-center justify-center overflow-hidden rounded-3xl bg-neutral-100 transition-all">
+                <div className="relative w-[91%] h-[91%]">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -134,7 +134,7 @@ export function Portfolio({
               </div>
 
               {/* Text Card */}
-              <div className="group relative w-[361px] lg:w-[387px] h-[110px] lg:h-[118px] mb-2 p-6 bg-neutral-100 rounded-3xl">
+              <div className="group relative w-full max-w-[361px] lg:max-w-[387px] h-[110px] lg:h-[118px] mb-2 p-6 bg-neutral-100 rounded-3xl">
                 {/* Border line - positioned absolutely at center */}
                 <div className="absolute left-6 right-[72px] top-1/2 -translate-y-1/2 h-px bg-neutral-300"></div>
 
