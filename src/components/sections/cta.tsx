@@ -104,7 +104,7 @@ export function CTA({
             </div>
 
             {/* Portfolio Thumbnails - 3D Cards */}
-            <div className="flex gap-4 items-center justify-center lg:justify-start lg:gap-6">
+            <div className="w-full flex gap-4 items-center justify-center lg:justify-start lg:gap-6">
               {portfolioSvgs.map((image, index) => (
                 <div
                   key={index}
