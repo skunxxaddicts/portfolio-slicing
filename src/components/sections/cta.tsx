@@ -88,13 +88,13 @@ export function CTA({
         <div className="grid gap-8 mt-2 lg:grid-cols-2 lg:gap-12">
           {/* Left: Content and Portfolio */}
           <motion.div
-            className="space-y-8 lg:my-[120px] flex flex-col items-center lg:items-start"
+            className="space-y-8 lg:my-[120px] flex flex-col items-start"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             {/* Header */}
-            <div className="w-full text-center lg:text-left">
+            <div className="w-full text-left">
               <h2 className="mb-4 text-display-3xl font-bold text-neutral-950 lg:text-display-xl">
                 {title}
               </h2>
@@ -143,7 +143,7 @@ export function CTA({
               initial={{ z: -200 }}
               whileInView={{ z: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               style={{ transformStyle: 'preserve-3d' }}
             >
               <Image
@@ -159,7 +159,7 @@ export function CTA({
             <div className="relative w-full max-w-[361px] h-[456px] rounded-2xl bg-white p-6 shadow-[0_0_28px_rgba(0,0,0,0.1)] lg:max-w-[612px] lg:h-[504px] lg:rounded-4xl lg:p-8 lg:my-[120px]">
               <form
                 onSubmit={handleSubmit}
-                className="space-y-6 lg:space-y-4 lg:gap-2"
+                className="space-y-3 lg:space-y-4 lg:gap-2"
               >
                 {/* Name */}
                 <div>

@@ -106,7 +106,10 @@ export function FAQ({
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="border-b border-neutral-300 py-2"
+                  className={cn(
+                    'py-2',
+                    index < faqs.length - 1 && 'border-b border-neutral-300'
+                  )}
                 >
                 <AccordionTrigger className="hover:no-underline [&>svg]:hidden">
                   <div className="flex items-center justify-between w-full gap-2 lg:gap-4">
