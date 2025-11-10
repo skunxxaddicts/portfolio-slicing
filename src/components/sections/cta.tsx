@@ -88,13 +88,13 @@ export function CTA({
         <div className="grid gap-8 mt-2 lg:grid-cols-2 lg:gap-12">
           {/* Left: Content and Portfolio */}
           <motion.div
-            className="space-y-8 lg:my-[120px]"
+            className="space-y-8 lg:my-[120px] flex flex-col items-center lg:items-start"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             {/* Header */}
-            <div>
+            <div className="w-full text-center lg:text-left">
               <h2 className="mb-4 text-display-3xl font-bold text-neutral-950 lg:text-display-xl">
                 {title}
               </h2>
@@ -104,7 +104,7 @@ export function CTA({
             </div>
 
             {/* Portfolio Thumbnails - 3D Cards */}
-            <div className="flex gap-4 items-center justify-start lg:gap-6">
+            <div className="flex gap-4 items-center justify-center lg:justify-start lg:gap-6">
               {portfolioSvgs.map((image, index) => (
                 <div
                   key={index}
@@ -131,7 +131,7 @@ export function CTA({
 
           {/* Right: Man Illustration + Contact Form */}
           <motion.div
-            className="relative"
+            className="relative flex flex-col items-center lg:items-start"
             style={{ perspective: '1000px' }}
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -156,7 +156,7 @@ export function CTA({
             </motion.div>
 
             {/* Contact Form */}
-            <div className="relative w-[361px] h-[456px] rounded-2xl bg-white p-6 shadow-[0_0_28px_rgba(0,0,0,0.1)] lg:w-[612px] lg:h-[504px] lg:rounded-4xl lg:p-8 lg:my-[120px]">
+            <div className="relative w-full max-w-[361px] h-[456px] rounded-2xl bg-white p-6 shadow-[0_0_28px_rgba(0,0,0,0.1)] lg:max-w-[612px] lg:h-[504px] lg:rounded-4xl lg:p-8 lg:my-[120px]">
               <form
                 onSubmit={handleSubmit}
                 className="space-y-6 lg:space-y-4 lg:gap-2"
@@ -176,7 +176,7 @@ export function CTA({
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-[328px] h-12 rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 transition-all lg:w-[548px] lg:px-5 focus:outline-none focus:border-gray-300/50"
+                    className="w-full h-12 rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 transition-all lg:px-5 focus:outline-none focus:border-gray-300/50"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -196,7 +196,7 @@ export function CTA({
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-[328px] h-12 rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 transition-all lg:w-[548px] lg:px-5 [&:-webkit-autofill]:bg-white [&:-webkit-autofill]:shadow-[0_0_0_1000px_white_inset] focus:outline-none focus:border-gray-300/50"
+                    className="w-full h-12 rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 transition-all lg:px-5 [&:-webkit-autofill]:bg-white [&:-webkit-autofill]:shadow-[0_0_0_1000px_white_inset] focus:outline-none focus:border-gray-300/50"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -215,7 +215,7 @@ export function CTA({
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-[329px] h-[134px] rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 resize-none transition-all lg:w-[548px] lg:px-5 focus:outline-none focus:border-gray-300/50"
+                    className="w-full h-[134px] rounded-xl border border-neutral-300 bg-white px-2 py-2 text-base text-neutral-950 placeholder:text-neutral-600 resize-none transition-all lg:px-5 focus:outline-none focus:border-gray-300/50"
                     placeholder="Enter your message"
                   />
                 </div>
@@ -223,7 +223,7 @@ export function CTA({
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-[329px] h-11 rounded-full bg-primary-300 px-2 py-2 text-base font-semibold text-white transition-colors hover:bg-primary-400 lg:w-[548px] lg:h-12"
+                  className="w-full h-11 rounded-full bg-primary-300 px-2 py-2 text-base font-semibold text-white transition-colors hover:bg-primary-400 lg:h-12"
                 >
                   Let&apos;s Talk
                 </button>
