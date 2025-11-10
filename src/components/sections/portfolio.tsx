@@ -99,7 +99,7 @@ export function Portfolio({
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="w-full relative flex flex-col items-center"
+              className="w-full flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -108,28 +108,31 @@ export function Portfolio({
                 ease: 'easeOut',
               }}
             >
-              {/* Best Portfolio Badge */}
-              <div className="absolute top-7 left-0 sm:-left-2 z-20">
-                <div className="relative">
-                  <Image
-                    src="/images/tape.svg"
-                    alt="Best Portfolio"
-                    width={97}
-                    height={29}
-                    className="object-contain"
-                  />
+              {/* Card Wrapper with Badge */}
+              <div className="relative w-full max-w-[361px] lg:max-w-[387px]">
+                {/* Best Portfolio Badge */}
+                <div className="absolute top-7 -left-2 z-20">
+                  <div className="relative">
+                    <Image
+                      src="/images/tape.svg"
+                      alt="Best Portfolio"
+                      width={97}
+                      height={29}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Image Card */}
-              <div className="group relative w-full max-w-[361px] lg:max-w-[387px] aspect-square flex items-center justify-center overflow-hidden rounded-3xl bg-neutral-100 transition-all">
-                <div className="relative w-[91%] h-[91%]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-md"
-                  />
+                {/* Image Card */}
+                <div className="group relative w-full aspect-square flex items-center justify-center overflow-hidden rounded-3xl bg-neutral-100 transition-all">
+                  <div className="relative w-[91%] h-[91%]">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-md"
+                    />
+                  </div>
                 </div>
               </div>
 
